@@ -11,3 +11,5 @@ The second script will then check the value of the Outcome variable.  If the var
 The Outcometest varibale is set to: @lab.Variable(OutComeTest)
 
 You will notice in the outputs the output from the scripts is always one execution behind what you type in.
+
+Automated Github upload test
