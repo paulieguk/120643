@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Publish:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -32,9 +32,10 @@ jobs:
           
       #Upload instructions.zip to LOD
       - name: Upload instructions
-        uses: toomasz/upload-artifact-action@v0.2
+        uses: indiesdev/curl@v1.1
         with:
-          url: https://labondemand.com/api/v3/updatelabinstructions?id=2393048
-          forms: '{"_api_key":"${{ secrets.API_KEY }}","buildInstallType":3}'
-          fileForms: '{"file":"instructions.zip"}'    
+          url: https://labondemand.com/api/v3//updatelabinstructionspackage?id=120643
+          method: "POST"
+          headers: '{"api_key": secrets.API_KEY}'
+          body: '{ "file": "instructions.zip" }'  
 
