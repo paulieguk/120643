@@ -31,5 +31,10 @@ jobs:
           exclusions: '*.git* /*node_modules/* .editorconfig'
           
       #Upload instructions.zip to LOD
-          
+ #    - name: Upload instructions
+ #      uses: toomasz/upload-artifact-action@v0.2
+ #       with:
+ #         url: https://labondemand.com/api/v3/updatelabinstructions?id=2393048
+ #         forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
+ #         fileForms: '{"file":"app/build/outputs/apk/release/app-release.apk"}'    
 
